@@ -22,19 +22,7 @@ function About() {
     <div className="relative z-10 min-h-screen py-10 px-5" id="about-section">
       {/* bg-[#222831] */}
 
-    {/* // <motion.div
-    //   id="about-section"
-    //   initial={{ opacity: 0, y: 80 }}
-    //   whileInView={{ opacity: 1, y: 0 }}
-    //   transition={{ duration: 0.6 }}
-    //   viewport={{ once: true }}
-    //   className="bg-[#222831] min-h-screen py-10 px-5"
-    // > */}
-      
       {/* Heading */}
-      {/* <h1 className="text-[#EEEEEE] text-3xl text-center mt-10 mb-10 font-poppins">
-        About
-      </h1> */}
     <div className="text-center mb-12">
       <h1 className="text-4xl font-bold font-inter text-white relative inline-block">
         About
@@ -46,7 +34,6 @@ function About() {
     </div>
 
       {/* Main Grid */}
-      {/* <div className="grid md:grid-cols-2 gap-10 items-center"> */}
       <motion.div
         variants={{
           hidden: {},
@@ -63,22 +50,6 @@ function About() {
       >
 
         {/* Left: About Me */}
-        {/* <div className="flex flex-col items-center text-center gap-4 mt-10"> */}
-
-        {/* <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          className="flex flex-col items-center text-center gap-4 mt-10"
-        > */}
-
-        {/* <motion.div
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center text-center gap-4 mt-10"
-        > */}
 
         <motion.div
           variants={{
@@ -98,15 +69,6 @@ function About() {
         >
           
           {/* Icon */}
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-[#EEEEEE] w-32 h-32"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-          </svg> */}
-
           <svg
             width="180"
             height="180"
@@ -140,7 +102,7 @@ function About() {
             />
           </svg>
 
-          {/* Text before: font-chakra*/}
+          {/* Text */}
           <p className="text-[#EEEEEE] text-sm md:text-base font-poppins max-w-md">
             I’m a full-stack developer skilled in MERN and PERN stacks, passionate about building responsive and efficient web applications.
           </p>
@@ -150,7 +112,6 @@ function About() {
 
           <p className="text-[#EEEEEE] text-sm md:text-base font-poppins max-w-md">
             Beyond coding, I’m a lifelong learner, a problem solver and always a curious mind. 
-            {/* Always learning. Always building. Always improving. */}
             So yeah, let's connect and build something cool together!
           </p>
 
@@ -168,24 +129,6 @@ function About() {
         </motion.div>
 
         {/* Right: Skills */}
-        {/* <div className="flex justify-center items-start gap-6 mt-15"> */}
-
-        {/* <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex justify-center items-start gap-6 mt-15"
-        > */}
-
-        {/* <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="flex justify-center items-start gap-6 mt-15"
-        > */}
-
         <motion.div
           variants={{
             hidden: {},

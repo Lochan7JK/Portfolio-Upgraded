@@ -45,12 +45,7 @@ function Contact() {
     if (form.phone && !/^[0-9]{10}$/.test(form.phone)) {
         newErrors.phone = "Enter valid 10 digit number";
     }
-    // if (!form.phone) {
-    //   newErrors.phone = "Phone no. is required";
-    // } else if (!/^[0-9]{10}$/.test(form.phone)) {
-    //   newErrors.phone = "Enter valid 10 digit number";
-    // }
-
+    
     // Email
     if (!form.email) {
       newErrors.email = "Email is required";
@@ -67,18 +62,6 @@ function Contact() {
 
     return newErrors;
   };
-
-  // Submit handler
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   const validationErrors = validate();
-  //   setErrors(validationErrors);
-
-  //   if (Object.keys(validationErrors).length === 0) {
-  //     alert("Form submitted successfully 🚀");
-  //   }
-  // };
 
 
   //Submit handler frontend integration with backend
@@ -134,61 +117,12 @@ function Contact() {
     }
   };
 
-
-  //// For Polished UI/UX after submitting form instead of alert - NOT DOING THIS THING
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   setSuccess("");
-  //   setServerError("");
-
-  //   const validationErrors = validate();
-  //   setErrors(validationErrors);
-
-  //   if (Object.keys(validationErrors).length === 0) {
-  //     setLoading(true);
-
-  //     try {
-  //       const response = await fetch("http://localhost:5000/api/contact", {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(form),
-  //       });
-
-  //       const data = await response.json();
-
-  //       if (data.success) {
-  //         setSuccess("Message sent successfully 🚀");
-
-  //         setForm({
-  //           name: "",
-  //           phone: "",
-  //           email: "",
-  //           message: "",
-  //         });
-  //       } else {
-  //         setServerError("Something went wrong ❌");
-  //       }
-  //     } catch (error) {
-  //       console.error(error);
-  //       setServerError("Server error ❌");
-  //     }
-
-  //     setLoading(false);
-  //   }
-  // };
-////
-
-
   return (
     <div className="relative z-10 min-h-screen py-10 px-5" id="contact-section">
       {/* bg-[#222831] */}
 
-      {/* Heading before: font-chakra*/}
+      {/* Heading  */}
       <div className="text-center mb-8 mt-10">
-        {/* <h1 className="text-[#EEEEEE] text-3xl font-poppins">Get in Touch ✈️</h1> */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold font-inter text-white relative inline-block">
             Get in Touch
@@ -286,7 +220,6 @@ function Contact() {
             type="submit"
             disabled={loading}
             className="bg-[#00ADB5] text-white px-6 py-2 rounded-md block mt-6 mx-auto flex items-center justify-center gap-2 hover:opacity-85 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-            // hover:bg-[#019ca3], bg-[#009e7a]
           >
             {loading && (
               <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>

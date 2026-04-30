@@ -34,11 +34,6 @@ function MajorProjects() {
   return (
     <section className="relative z-10 py-16 md:py-24 px-4 md:px-10 ml-5 mr-5">
       
-      {/* <h1 className="text-white text-3xl text-center mb-20">
-        Major Projects
-      </h1> */}
-      
-
       {projects.map((project, index) => (
         <div
           key={index}
@@ -50,7 +45,7 @@ function MajorProjects() {
 
         {/* LEFT SIDE */}
             <div className="md:sticky md:top-32 self-start pl-20 pb-20">
-                {/* text-center md:text-left flex flex-wrap justify-center md:justify-start gap-2 */}
+                
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -96,23 +91,6 @@ function MajorProjects() {
 
 
         {/* RIGHT SIDE */}
-          {/* <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center md:justify-start gap-2"
-           > */}
-            {/* <img
-              src={project.image}
-              alt={project.title}
-              className="rounded-xl shadow-[0_0_40px_rgba(0,173,181,0.3)] hover:scale-105 transition duration-500"
-            /> */}
-            {/* <img
-                src={project.image}
-                alt={project.title}
-                className="w-full max-w-[500px] mx-auto md:max-w-[600px] rounded-xl shadow-[0_0_40px_rgba(0,173,181,0.3)] hover:scale-105 transition duration-500"
-            />
-          </motion.div> */}
 
         <Tilt
             tiltMaxAngleX={15}

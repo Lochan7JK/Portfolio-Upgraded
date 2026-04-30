@@ -1,107 +1,4 @@
 // src/components/Hero.jsx
-
-// function Hero() {
-//   return (
-//     <div
-//       className="flex justify-center items-center h-screen bg-cover bg-center bg-no-repeat relative"
-//       style={{ backgroundImage: "url('src/assets/images/IxHq7M.gif')" }}
-//       id="home"
-//     >
-//       <div className="text-center px-4">
-//         <h4 className="text-[#FBF8EF] text-2xl py-2 md:text-3xl">
-//           Hello, I'm
-//         </h4>
-
-//         <h1 className="text-[#AFFFFF] text-3xl md:text-4xl font-silkscreen">
-//           Lochan Singoria
-//         </h1>
-
-//         <h4 className="text-[#FBF8EF] text-lg md:text-xl">
-//           A Full Stack Web Developer
-//         </h4>
-
-//         <p className="text-[#FBF8EF] mt-3 text-base md:text-lg font-chakra max-w-xl mx-auto">
-//           Welcome to my digital world! I design websites, write code, and spend
-//           90% of my time Googling error messages.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-// 
-// export default Hero;
-
-
-
-// import { useState } from "react";
-// import { motion } from "framer-motion";
-
-// function Hero() {
-//   const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
-//   const handleMouseMove = (e) => {
-//     const { innerWidth, innerHeight } = window;
-//     const x = (e.clientX / innerWidth - 0.5) * 30;
-//     const y = (e.clientY / innerHeight - 0.5) * 30;
-//     setMouse({ x, y });
-//   };
-
-//   return (
-//     <div
-//       id="home"
-//       onMouseMove={handleMouseMove}
-//       className="relative flex justify-center items-center h-screen overflow-hidden bg-[#0f172a]"
-//     >
-      
-//       {/* 🔥 Moving Background */}
-//       <motion.div
-//         animate={{ x: mouse.x, y: mouse.y }}
-//         transition={{ type: "spring", stiffness: 50 }}
-//         className="absolute inset-0 opacity-10 bg-[url('/images/noise.png')]"
-//         style={{
-//           backgroundImage: "url('/images/IxHq7M.gif')",
-//           backgroundSize: "cover",
-//           backgroundPosition: "center",
-//           opacity: 0.25,
-//         }}
-//       />
-
-//       {/* 🔥 Glow Effect */}
-//       <div
-//         className="absolute w-[400px] h-[400px] rounded-full blur-3xl"
-//         style={{
-//           background: "#00ADB5",
-//           left: `${mouse.x * 5 + 200}px`,
-//           top: `${mouse.y * 5 + 200}px`,
-//           opacity: 0.2,
-//         }}
-//       />
-
-//       {/* 🔥 Content */}
-//       <div className="relative text-center px-4 z-10">
-//         <h4 className="text-[#FBF8EF] text-lg">Hello, I'm</h4>
-
-//         <h1 className="text-[#AFFFFF] text-4xl md:text-6xl font-silkscreen">
-//           Lochan Singoria
-//         </h1>
-
-//         <h4 className="text-[#FBF8EF] text-lg mt-2">
-//           Full Stack Developer
-//         </h4>
-
-//         <p className="text-[#FBF8EF] mt-5 text-base md:text-lg max-w-xl mx-auto">
-//           I design, build, and debug things until they work… or I cry.
-//         </p>
-//       </div>
-
-//     </div>
-//   );
-// }
-
-// export default Hero;
-
-
-
 import ParticlesBg from "./ParticlesBg";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
@@ -135,49 +32,42 @@ useEffect(() => {
             density: { enable: true },
           },
           color: {
-            value: ["#00ADB5", "#AFFFFF"], // 🔥 multi-color 
+            value: ["#00ADB5", "#AFFFFF"],  
           },
           links: {
-            enable: false, // ❌ disable default connections
-            distance: 120, // closer = more connections
+            enable: false, // disable default connections
+            distance: 120,
             color: "#00ADB5",
-            opacity: 0.5, // 🔥 increase visibility
+            opacity: 0.5,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 0.5, // less = smoother
+            speed: 0.5,
           },
           opacity: {
             value: 0.5,
           },
           size: {
-            value: { min: 1, max: 2 }, // 🔥 smaller dots
+            value: { min: 1, max: 2 }, // smaller dots
           },
         },
         interactivity: {
-          detectsOn: "canvas", // ✅ VERY IMPORTANT FIX
+          detectsOn: "canvas", 
           events: {
             onHover: {
                 // enable: true,
-                enable: !isMobile, // ❌ disable on mobile
+                enable: !isMobile, // disable on mobile
                 // mode: "grab",
-                mode: "connect", // 🔥 ONLY on hover
-                parallax: { enable: true, smooth: 1000 }, // 🔥 smooth motion feel
+                mode: "connect", // ONLY on hover
+                parallax: { enable: true, smooth: 1000 }, 
             },
           },
           modes: {
-            // grab: {
-            //   distance: 180,
-            //   links: {
-            //     opacity: 1,
-            //   },
-            // },
-
             connect: {
                 distance: 100,
                 links: {
-                    opacity: 0.15, // 🔥 faded edges (your requirement)
+                    opacity: 0.15, 
                 },
                 radius: 350,
             },
@@ -197,7 +87,6 @@ useEffect(() => {
       <div className="text-center z-10 relative px-4">
         <h1 className="text-white text-4xl md:text-6xl">
           Hello, I'm <span className="text-[#AFFFFF] glow-text">Lochan</span>
-        {/* </h1> */}
         <span className="text-gray-500 text-sm md:text-lg mt-2 block">
           And I'm Not a Wizard or Chinese (I wish I were...)
         </span>
@@ -206,10 +95,7 @@ useEffect(() => {
         </span>
         </h1>
 
-
-        {/* <p className="text-gray-400 mt-4 text-lg font-poppins">
-          I'm a full stack web developer.
-        </p> */}
+            
         <TypeAnimation
           sequence={[
             "A Full Stack Web Developer",
@@ -231,14 +117,6 @@ useEffect(() => {
           repeat={Infinity}
           className="text-white mt-4 text-xl block font-silkscreen hover:text-[#AFFFFF]"
         />
-
-        {/* <button className="mt-6 border border-[#AFFFFF] text-[#AFFFFF] px-6 py-2 rounded-md hover:bg-[#AFFFFF]-500 hover:text-white transition">
-          View my work ↓
-        </button> */}
-
-        {/* className="mt-6 px-6 py-3 rounded-md border border-white/10 text-[#00ADB5] 
-                    hover:bg-[#00ADB5] hover:text-white transition 
-                    shadow-[0_0_10px_#00ADB5] hover:shadow-[0_0_4px_#00ADB5]" */}
         
         <button
           className="mt-6 px-6 py-3 border border-[#AFFFFF]/70 hover:border-[#00ADB5] text-white/90 rounded-md relative overflow-hidden group"

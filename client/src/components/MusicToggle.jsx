@@ -7,12 +7,10 @@ function MusicToggle() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Optional: try autoplay (may be blocked)
   useEffect(() => {
     const audio = audioRef.current;
     audio.volume = 0.3;
-
-    // autoplay attempt (browser may block)
+    
     audio.play().then(() => {
       setIsPlaying(true);
     }).catch(() => {

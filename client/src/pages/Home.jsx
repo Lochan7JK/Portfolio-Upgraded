@@ -10,9 +10,6 @@ import MusicToggle from "../components/MusicToggle";
 import ParticlesBg from "../components/ParticlesBg";
 import CursorGlow from "../components/CursorGlow";
 import FloatingSocials from "../components/FloatingSocials";
-// import FloatingShapes from "../components/FloatingShapes";
-// import ScrollToTop from "../components/ScrollToTop";
-// import ExampleProjects from "../components/ExampleProjects";
 import ScrollIndicator from "../components/ScrollIndicator";
 
 
@@ -31,13 +28,13 @@ function Home() {
             density: { enable: true },
           },
           color: {
-            value: ["#00ADB5", "#AFFFFF"], // 🔥 multi-color 
+            value: ["#00ADB5", "#AFFFFF"], // multi-color 
           },
           links: {
-            enable: false, // ❌ disable default connections
+            enable: false, //  disable default connections
             distance: 120, // closer = more connections
             color: "#00ADB5",
-            opacity: 0.5, // 🔥 increase visibility
+            opacity: 0.5, // increase visibility
             width: 1,
           },
           move: {
@@ -51,18 +48,8 @@ function Home() {
             value: { min: 1, max: 2 }, // 🔥 smaller dots
           },
         },
-        // detectRetina: true,
-        // interactivity: {
-  
-        //   events: {
-        //     onHover: {
-        //       enable: !isMobile,
-        //       mode: "connect",
-        //     },
-        //   },
-        // }
 
-        // ❌ IMPORTANT: completely disable interactivity
+        // To completely disable interactivity
         interactivity: {
           detectsOn: "canvas", // 👈 IMPORTANT (not window)
           events: {
@@ -78,7 +65,6 @@ function Home() {
 
   return (
     <div className="relative">
-      {/* <FloatingShapes /> */}
       <FloatingSocials />
       <CursorGlow />
 
@@ -87,18 +73,16 @@ function Home() {
 
       <ScrollIndicator />
 
-      {/* <Example /> */}
       <Hero />
       <Navbar />
       <About />
       <Projects />
-      {/* <ExampleProjects /> */}
+
       <Contact />
 
       <MusicToggle /> {/* 👈 floating button */}
 
       <Footer /> 
-      {/* <ScrollToTop /> */}
 
     </div>
   );

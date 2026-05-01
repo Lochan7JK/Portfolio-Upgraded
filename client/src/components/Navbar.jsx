@@ -46,14 +46,6 @@ function Navbar() {
   return (
     <div className="w-full sticky top-0 z-35 backdrop-blur-md py-4 border-b border-black/20 shadow-lg
         bg-gradient-to-r from-[#0f172a]/80 via-[#111827]/70 to-[#272B31]/92">
-    {/* <motion.div
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="w-full sticky top-0 z-50 backdrop-blur-md py-4 border-b border-black/20 shadow-lg
-        bg-gradient-to-r from-[#0f172a]/80 via-[#111827]/70 to-[#272B31]/92" 
-        // [#0f172a]
-    > */}
 
         <motion.div
             initial="hidden"
@@ -89,23 +81,11 @@ function Navbar() {
                   : "text-white hover:text-[#00ADB5]"
               }
             `}
-
-            // className={`relative cursor-pointer transition-all duration-300 
-            //     ${
-            //         active === item.id
-            //         ? "text-[#00ADB5]"
-            //         : "text-gray-400 hover:text-[#00ADB5]"
-            //     }
-            // `}
           >
             <span className="absolute right-3 bottom-0 w-0 h-[2px] text-xs bg-[#00ADB5] transition-all duration-300 group-hover:w-full">
                 {String(index + 1).padStart(2, "0")}
             </span>
-
-            {/* <span className="mr-2 text-sm text-gray-500">
-              {String(index + 1).padStart(2, "0")}
-            </span> */}
-
+            
             {item.label}
 
             {/* Underline */}
